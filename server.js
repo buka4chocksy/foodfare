@@ -18,6 +18,10 @@ app.use(cookieparser());
 app.use(cors())
 app.use('/api', rootRouter);
 
+app.get('/', function(req, res){
+    res.json({message:"hello world"});
+});
+
 dbConfiguration();
 
 
