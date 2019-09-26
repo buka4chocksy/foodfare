@@ -7,7 +7,7 @@ require('dotenv').config();
 var router = express.Router();
 var rootRouter  = require('./routes')(router);
 var dbConfiguration = require('./config/db');
-
+var cors = require('cors')
 
 
 
@@ -15,6 +15,7 @@ app.use(morgan('dev'));
 app.use(express.json());//for parsing application/json
 app.use(express.urlencoded({ extended: false})); //for parsing application/x-www-form-urlencoded
 app.use(cookieparser());
+app.use(cors())
 app.use('/api', rootRouter);
 
 dbConfiguration();
