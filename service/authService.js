@@ -34,6 +34,8 @@ exports.Register = function(Options){
                          })
                         }
                     })
+                }else{
+                    resolve({success:false , message:'User already exists'})   
                 }
             }).catch(err =>{
                 reject(err)
