@@ -21,6 +21,4 @@ app.use('/api', rootRouter);
 dbConfiguration();
 
 
-app.listen(port, function(){
-    console.log("Running the server on port:", port);
-});
+module.exports = app;
